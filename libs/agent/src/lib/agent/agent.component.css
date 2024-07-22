@@ -1,0 +1,79 @@
+.agent-page {
+    display: flex;
+    width: 100%;
+}
+
+.agent-calendar {
+    width: 80%;
+}
+
+.agent-form {
+    margin-top: 5rem;
+    width: 20%;
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.app-select-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 9rem;
+    height: 2rem;
+
+}
+
+.app-select-box {
+    border: none;
+    appearance: none;
+    padding: 0 1rem 0 1rem;
+    width: 100%;
+    color: white;
+    background: #007bff;
+    font-size: 1rem;
+    border-radius: 1rem;
+}
+
+.app-select-box:hover {
+    cursor: pointer;
+}
+
+.app-select-box:focus {
+    outline: none;
+}
+
+.icon-app-select {
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.week-label {
+    margin-bottom: 1rem;
+}
+.week-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 2rem;
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+
+.active {
+    background: #f33;
+}
+
+.rest {
+    background: #3b2;
+}

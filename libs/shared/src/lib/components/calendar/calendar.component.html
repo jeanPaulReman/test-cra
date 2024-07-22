@@ -1,0 +1,20 @@
+<div class="header-calendar">
+  <div><button (click)="changeMonth(-1)" class="basic-btn-app">Précèdent</button></div>
+  <div>{{ store.currentMonthLabel() }} {{ store.year() }}</div>
+  <div><button (click)="changeMonth(1)" class="basic-btn-app">Suivant</button></div>
+</div>
+
+<div class="header-days">
+  @for (day of days; track day) {
+    <div class="cell-day">{{ day }}</div>
+  }
+</div>
+@for(week of store.weeks(); track week[0]) {
+  <lib-calendar-week
+    [activities]="store.activities()"
+    [currentMonth]="store.indexMonth()"
+    [week]="week"/>
+}
+
+
+

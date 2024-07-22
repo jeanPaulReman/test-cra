@@ -1,0 +1,5 @@
+<form [formGroup]="loginForm" class="form-column">
+  <div><input formControlName="name" placeholder="pseudo / nom" type="text" /></div>
+  <div><input formControlName="password" placeholder="mot de passe" type="password" /></div>
+  <div><button (click)="submitLoginForm()">Envoyer</button></div>
+</form>

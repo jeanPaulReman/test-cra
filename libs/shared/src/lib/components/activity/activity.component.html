@@ -1,0 +1,22 @@
+@switch (currentUser()?.role) {
+  @case ('agent') {
+    <div [ngClass]="currentUser()?.name">
+      {{ currentUser()?.name }} / {{ agentActivity().mission ?? 'repos' }}
+    </div>
+
+  }
+
+  @case ('manager') {
+    @for(value of activity().value; track value.agent) {
+      <div [ngClass]="value.agent">
+        {{ value.agent }} / {{ value?.mission ?? 'repos'  }}
+      </div>
+    }
+  }
+
+  @default {
+    <div [ngClass]="currentUser()?.name">
+      {{ currentUser()?.name }} {{ agentActivity().mission }}
+    </div>
+  }
+}

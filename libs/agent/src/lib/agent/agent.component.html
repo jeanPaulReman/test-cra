@@ -1,0 +1,56 @@
+<div class="agent-page">
+  <div class="agent-calendar">
+    <lib-calendar />
+  </div>
+
+  <div class="agent-form">
+    <h4  data-currentagent style="text-align: center">Compte rendu agent {{ currentAgent }}</h4>
+
+    <div style="text-align: center">
+      @for (item of formResult(); let index = $index; track item) {
+        <div>
+          <div class="week-label">
+            Semaine {{ index + 1 }}
+          </div>
+
+          <div  class="week-block">
+          <div class="app-select-container">
+            <select
+              [class.active]="item.status === 'active'"
+              [class.rest]="item.status === 'rest'"
+              class="app-select-box" [(ngModel)]="item.status">
+              <option disabled value=""><div style="text-align: center">Select status</div></option>
+              @for (status of statuses; track status.value) {
+                <option [value]="status.value">{{ status.label }}</option>
+              }
+            </select>
+          </div>
+
+          <div class="app-select-container">
+            <select class="app-select-box" [(ngModel)]="item.mission">
+              <option disabled value="">Select mission</option>
+              @for (mission of missions; track mission.value) {
+                <option [value]="mission.value">{{ mission.label }}</option>
+              }
+            </select>
+          </div>
+          </div>
+
+
+        </div>
+
+      }
+    </div>
+    <div style="text-align: center">
+      <button
+        [class.disabled]="!isValid()"
+        class="basic-btn-app"
+        (click)="$event.preventDefault();submitForm()">Envoyer
+      </button>
+    </div>
+
+
+  </div>
+</div>
+
+

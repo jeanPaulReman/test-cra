@@ -1,0 +1,20 @@
+.john {
+    background: #007bff;
+    padding: 0.1rem 0.5rem;
+    color: white;
+    border-radius: 2rem;
+}
+
+.sandy {
+    background: deeppink;
+    padding: 0.2rem 0.5rem;
+    color: white;
+    border-radius: 2rem;
+}
+
+.paul {
+    background: orange;
+    padding: 0.2rem 0.5rem;
+    color: white;
+    border-radius: 2rem;
+}

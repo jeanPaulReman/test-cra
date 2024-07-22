@@ -1,0 +1,12 @@
+<div class="row-week">
+  @for (day of week(); track day) {
+    <div class="cell-week-day" [class.cell-other-month]="isOtherMonth(day)">
+      <div>{{ day | date: 'dd/MM/yyyy' }}</div>
+      @for (activity of activities(); track activity.date) {
+        @if (activity.date.getTime() === day.getTime()) {
+          <lib-activity [activity]="activity"/>
+        }
+      }
+    </div>
+  }
+</div>

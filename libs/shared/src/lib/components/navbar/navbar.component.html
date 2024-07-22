@@ -1,0 +1,24 @@
+<header class="header-top">
+<nav class="nav-app">
+  <div class="self-left">
+    CRA AGENT {{ store.currentUser()?.name?.toUpperCase() }}
+  </div>
+  @if (role === roleEnum.AGENT) {
+  <div class="link">
+    <a routerLink="user">Imputation</a>
+  </div>
+  }
+  @if (role === roleEnum.MANAGER) {
+  <div class="link">
+    <a routerLink="admin">Calendrier</a>
+  </div>
+  }
+  @if (role) {
+  <div (click)="logout()" class="link">
+    <a routerLink="login">
+      <img width="24" height="24" ngSrc="on_off.png" alt="icon-user" />
+    </a>
+  </div>
+  }
+</nav>
+</header>
