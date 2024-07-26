@@ -58,6 +58,5 @@
       "style": "css"
     }
   },
-  "defaultProject": "test-cra",
-  "nxCloudAccessToken": "OTBhMzI3ZWItYjU1MS00MGNjLWE5MjQtZWJkZDU4ZDhmYmQxfHJlYWQtd3JpdGU="
+  "defaultProject": "test-cra"
 }
